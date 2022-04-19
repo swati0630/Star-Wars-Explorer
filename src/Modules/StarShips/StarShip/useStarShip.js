@@ -8,7 +8,7 @@ const useStarShip = ({id}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-    const fetchPerson = useCallback(() => {
+    const fetchStarShip = useCallback(() => {
         setLoading(true);
         const path = [URL, id].join('');
         axios.get(path)
@@ -23,7 +23,7 @@ const useStarShip = ({id}) => {
             });
     }, [id]);
 
-    useEffect(() => fetchPerson(), []);
+    useEffect(() => fetchStarShip(), []);
 
     return {data, loading, error}
 };

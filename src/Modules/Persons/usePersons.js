@@ -9,7 +9,7 @@ const usePerson = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-    const fetchPerson = useCallback(() => {
+    const fetchPersons = useCallback(() => {
         setLoading(true);
         axios.get(URL)
             .then((res) => {
@@ -26,7 +26,7 @@ const usePerson = () => {
             });
     }, []);
 
-    useEffect(() => fetchPerson(), []);
+    useEffect(() => fetchPersons(), []);
 
     return {data, loading, error}
 };

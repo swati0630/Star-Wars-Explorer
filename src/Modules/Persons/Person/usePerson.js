@@ -10,7 +10,8 @@ const usePerson = ({id}) => {
 
     const fetchPerson = useCallback(() => {
         setLoading(true);
-        axios.get(`${URL}${id}`)
+        const path = [URL, id].join('');
+        axios.get(path)
             .then((res) => {
                 const {name, height, mass, hair_color, eye_color, birth_year, gender} = res.data; 
                 setData({

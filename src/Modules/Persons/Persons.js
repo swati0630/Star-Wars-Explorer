@@ -9,7 +9,7 @@ export default function Persons(props) {
 
     const content = useMemo(() => {
         if (loading) {
-            return Array.from({length: 10}).map((_, index) => (
+            return Array.from({length: 12}).map((_, index) => (
                 <Grid item key={`skeleton-${index}`} xs={4}>
                     <Card loading={loading}>
                         <AccountCircleIcon />

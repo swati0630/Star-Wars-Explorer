@@ -9,7 +9,7 @@ const useStarShips = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-    const fetchPerson = useCallback(() => {
+    const fetchStarShips = useCallback(() => {
         setLoading(true);
         axios.get(URL)
             .then((res) => {
@@ -26,7 +26,7 @@ const useStarShips = () => {
             });
     }, []);
 
-    useEffect(() => fetchPerson(), []);
+    useEffect(() => fetchStarShips(), []);
 
     return {data, loading, error}
 };

@@ -8,7 +8,7 @@ const usePlanet = ({id}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-    const fetchPerson = useCallback(() => {
+    const fetchPlanet = useCallback(() => {
         setLoading(true);
         const path = [URL, id].join('');
         axios.get(path)
@@ -31,7 +31,7 @@ const usePlanet = ({id}) => {
             });
     }, [id]);
 
-    useEffect(() => fetchPerson(), []);
+    useEffect(() => fetchPlanet(), []);
 
     return {data, loading, error}
 };
